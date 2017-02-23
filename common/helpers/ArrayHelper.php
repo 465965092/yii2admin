@@ -152,7 +152,7 @@ class ArrayHelper extends \yii\helpers\ArrayHelper
      * ---------------------------------------
      */
     public static function listDataLevel($list, $key, $value, $pk = 'id', $pid = 'pid', $root = 0){
-        if (!is_array($list)) {
+        if (!is_array($list)||empty($list)) {
             return [];
         }
         $_tmp = $list;
